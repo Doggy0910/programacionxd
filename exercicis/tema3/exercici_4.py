@@ -1,0 +1,6 @@
+nom = input("Escriu el teu nom: ")
+nota_1 = input("Escriu la nota del primer trimestre: ")
+nota_2 = input("Escriu la nota del segon trimestre: ")
+nota_3 = input("Escriu la nota del tercer trimestre: ")
+print("El teu nom és: " + nom + " i la teva nota final és: " + str(round((float(nota_1) + float(nota_2) + float(nota_3)) / 3)))
+print("O: " + str(float((float(nota_1) + float(nota_2) + float(nota_3)) / 3)))
