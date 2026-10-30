@@ -12,7 +12,7 @@ operacions = 0
 historial = []
 
 print("---------------------------------")
-print("     BANC PYTHON - CAIXER")
+print("     BANC - CAIXER")
 print("---------------------------------")
 
 intents = 0
@@ -97,7 +97,7 @@ else:
                 print("Saldo disponible:", round(saldo, 2), "EUR")
 
             elif total_retirat + quantitat > limit_retirada:
-                print("Error: has superat el limit de retirada de la sessio!")
+                print("Error: has superat el limit de retirada de la sessio")
                 print("Encara pots retirar", round(limit_retirada - total_retirat, 2), "EUR")
 
             else:
