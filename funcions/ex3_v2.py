@@ -1,3 +1,5 @@
+# segona versio mes eficient
+
 def convertir_emmagatzematge(quantitat, unitat_origen, unitat_desti):
 
     unitats = {"MB": 1, "GB": 1024, "TB": 1048576}
