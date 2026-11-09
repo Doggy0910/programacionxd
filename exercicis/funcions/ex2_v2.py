@@ -4,10 +4,22 @@ import requests
 # versio amb una api de la conversio
 
 def convertir_divisa(quantitat, moneda):
+
+    if moneda == "JPY":
+        comissio = 0.07
+
+    elif moneda == "GBP":
+        comissio = 0.02
+
+    elif moneda == "USD":
+        comissio = 0.035
+
+    quantitat_final = quantitat - (quantitat * comissio)
+
     dades = {
         "from": "EUR",
         "to": moneda,
-        "amount": quantitat
+        "amount": quantitat_final
     }
 
     resposta = requests.post(
@@ -15,7 +27,7 @@ def convertir_divisa(quantitat, moneda):
         json=dades
     )
 
-    return resposta.json()
+    return resposta.json(), quantitat * comissio
 
 
 quantitat = float(input("Introdueix la quantitat de diners en euros: "))
@@ -42,5 +54,9 @@ while True:
         print("Opcio no valida.")
         continue
 
-    conversio = convertir_divisa(quantitat, moneda)
-    print(conversio["data"]["result"], moneda)
+    conversio, comissio = convertir_divisa(quantitat, moneda)
+
+    print("Comissio:", round(comissio, 2), "EUR")
+    print("Resultat:", conversio["data"]["result"], moneda)
+
+    # http POST https://api.botoi.com/v1/currency/convert from=EUR to=USD amount:=100 la peti.
