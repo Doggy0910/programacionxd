@@ -1,5 +1,8 @@
 import requests
 
+
+# versio amb una api de la conversio
+
 def convertir_divisa(quantitat, moneda):
     dades = {
         "from": "EUR",
