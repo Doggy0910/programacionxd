@@ -1,0 +1,3 @@
+#
+
+Chess esta hecho full vibecoded,  utilizando el vibecoding para experimentar con la programación y la IA. El programa permite jugar partidas mediante una interfaz gráfica y aplicar las reglas del ajedrez. Lo he hecho principalmente para probar hasta dónde se puede llegar programando con ayuda de la inteligencia artificial.
